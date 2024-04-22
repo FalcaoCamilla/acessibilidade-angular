@@ -1,0 +1,17 @@
+<main>
+  <h1 tabindex="0">Form</h1>
+  <!-- <app-yes-no-button-group
+    label="Are u good enough in Angular?"
+  >
+  </app-yes-no-button-group> -->
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <app-yes-no-button-group
+      formControlName="yesNoAnswer"
+      label="Are u good enough in Angular?"
+      [appDisableControl]="true"
+    >
+    </app-yes-no-button-group>
+    <button>Submit</button>
+  </form>
+</main>
